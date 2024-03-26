@@ -1,0 +1,161 @@
+@use "variables" as v;
+@use "global";
+
+// Main
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    .card {
+      width: 1440px;
+      height: 800px;
+      background: v.$secondaryGradient;
+      display: flex;
+      .text {
+        padding: 60px 220px 150px 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img.logo {
+          margin-bottom: 130px;
+        }
+        h1 {
+          font-size: 70px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 14px;
+          line-height: 1;
+          margin-bottom: 25px;
+          span {
+            font-size: 60px;
+            letter-spacing: 20px;
+            font-weight: 300;
+            color: v.$SoftRed;
+          }
+        }
+        p {
+          line-height: 1.6;
+          margin-bottom: 40px;
+        }
+        form {
+          width: 100%;
+          position: relative;
+          input[type="text"] {
+            width: 100%;
+            padding: 20px;
+            border-radius: 50px;
+            background: url(../images/icon-arrow.svg) no-repeat left;
+            background-size: 20px;
+            margin-bottom: 10px;
+            &::placeholder {
+              margin: 20px;
+            }
+          }
+          span.error-msg {
+            margin-left: 20px;
+            color: v.$SoftRed;
+          }
+          img.error-img {
+            position: absolute;
+            top: 18px;
+            right: 100px;
+            display: none;
+          }
+          input[type="submit"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 21px 40px;
+            border-radius: 50px;
+            background-color: lighten($color: v.$SoftRed, $amount: 10);
+            background-image: url(../images/icon-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border: unset;
+            &:active,
+            &:hover {
+              background: lighten($color: v.$SoftRed, $amount: 20);
+            }
+          }
+        }
+      }
+      .img {
+        height: 100%;
+        img.hero {
+          max-width: 610px;
+          max-height: 800px;
+        }
+      }
+    }
+    footer {
+      padding: 3em;
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        a {
+          color: hsl(228, 45%, 44%);
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    height: 100%;
+    .container {
+      width: 100%;
+      padding: 0;
+      .card {
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+        .text {
+          align-items: center;
+          padding: 1rem;
+          img.logo {
+            position: fixed;
+            top: 0;
+            left: 1rem;
+            padding: 30px;
+            width: 170px;
+            align-self: flex-start;
+          }
+          h1 {
+            font-size: 40px;
+            letter-spacing: 11px;
+            margin-bottom: 1rem;
+            text-align: center;
+            span {
+              font-size: 40px;
+              letter-spacing: 11px;
+            }
+          }
+          p {
+            line-height: 1.5;
+            text-align: center;
+          }
+          form {
+            input[type="text"] {
+            }
+            span.error-msg {
+            }
+            img.error-img {
+            }
+            input[type="submit"] {
+            }
+          }
+        }
+        .img {
+          position: relative;
+          top: 80px;
+          margin-bottom: 8rem;
+          img.hero {
+            content: url(../images/hero-mobile.jpg);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

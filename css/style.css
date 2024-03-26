@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+.container {
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .card {
+  width: 1440px;
+  height: 800px;
+  background: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  display: flex;
+}
+main .container .card .text {
+  padding: 60px 220px 150px 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .container .card .text img.logo {
+  margin-bottom: 130px;
+}
+main .container .card .text h1 {
+  font-size: 70px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+main .container .card .text h1 span {
+  font-size: 60px;
+  letter-spacing: 20px;
+  font-weight: 300;
+  color: hsl(0, 93%, 68%);
+}
+main .container .card .text p {
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+main .container .card .text form {
+  width: 100%;
+  position: relative;
+}
+main .container .card .text form input[type=text] {
+  width: 100%;
+  padding: 20px;
+  border-radius: 50px;
+  background: url(../images/icon-arrow.svg) no-repeat left;
+  background-size: 20px;
+  margin-bottom: 10px;
+}
+main .container .card .text form input[type=text]::placeholder {
+  margin: 20px;
+}
+main .container .card .text form span.error-msg {
+  margin-left: 20px;
+  color: hsl(0, 93%, 68%);
+}
+main .container .card .text form img.error-img {
+  position: absolute;
+  top: 18px;
+  right: 100px;
+  display: none;
+}
+main .container .card .text form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 21px 40px;
+  border-radius: 50px;
+  background-color: #fb9393;
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: unset;
+}
+main .container .card .text form input[type=submit]:active, main .container .card .text form input[type=submit]:hover {
+  background: #fdc4c4;
+}
+main .container .card .img {
+  height: 100%;
+}
+main .container .card .img img.hero {
+  max-width: 610px;
+  max-height: 800px;
+}
+main .container footer {
+  padding: 3em;
+}
+main .container footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+main .container footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 767px) {
+  main {
+    height: 100%;
+  }
+  main .container {
+    width: 100%;
+    padding: 0;
+  }
+  main .container .card {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  main .container .card .text {
+    align-items: center;
+    padding: 1rem;
+  }
+  main .container .card .text img.logo {
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    padding: 30px;
+    width: 170px;
+    align-self: flex-start;
+  }
+  main .container .card .text h1 {
+    font-size: 40px;
+    letter-spacing: 11px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  main .container .card .text h1 span {
+    font-size: 40px;
+    letter-spacing: 11px;
+  }
+  main .container .card .text p {
+    line-height: 1.5;
+    text-align: center;
+  }
+  main .container .card .img {
+    position: relative;
+    top: 80px;
+    margin-bottom: 8rem;
+  }
+  main .container .card .img img.hero {
+    content: url(../images/hero-mobile.jpg);
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

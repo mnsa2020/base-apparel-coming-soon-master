@@ -12,6 +12,7 @@ main {
       width: 1440px;
       height: 800px;
       background: v.$secondaryGradient;
+      background-image: url(../images/bg-pattern-desktop.svg);
       display: flex;
       .text {
         padding: 60px 220px 150px 160px;

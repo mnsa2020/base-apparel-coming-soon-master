@@ -30,6 +30,7 @@ main .container .card {
   width: 1440px;
   height: 800px;
   background: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  background-image: url(../images/bg-pattern-desktop.svg);
   display: flex;
 }
 main .container .card .text {
